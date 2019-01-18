@@ -1,0 +1,46 @@
+{
+  "name": "vue-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangdepp/vue-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangdepp/vue-learning/issues"
+  },
+  "homepage": "https://github.com/yangdepp/vue-learning#readme",
+  "dependencies": {
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "babel-helper-vue-jsx-merge-props": "2.0.3",
+    "babel-plugin-transform-vue-jsx": "3.5.0",
+    "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-core": "6.26.0",
+    "css-loader": "0.28.7",
+    "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "5.1.3",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
+    "style-loader": "0.19.1",
+    "url-loader": "0.6.2",
+    "postcss-loader": "2.0.9",
+    "autoprefixer": "7.2.3",
+    "vue": "2.5.13",
+    "vue-loader": "13.6.0",
+    "vue-template-compiler": "2.5.13",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7",
+    "html-webpack-plugin": "2.30.1"
+  }
+}
