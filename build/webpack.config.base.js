@@ -1,5 +1,4 @@
 const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 const createVueLoaderOptions = require('./vue-loader.config')
 
@@ -47,11 +46,7 @@ const config = {
         ]
       }
     ]
-  },
-  plugins: [
-    // 每次打包都删除dist目录
-    new CleanWebpackPlugin(['dist']),
-  ]
+  }
 }
 
 module.exports = config
