@@ -7,19 +7,19 @@
   </div>
 </template>
 <script>
-import Header from './views/layout/header.vue';
-import Footer from './views/layout/footer.jsx';
-import todo from './views/todo/todo.vue';
+import Header from './views/layout/header.vue'
+import Footer from './views/layout/footer.jsx'
+import todo from './views/todo/todo.vue'
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   components: {
     Header,
     Footer,
     todo
   }
-};
+}
 </script>
 
 <style lang="less" scoped>
