@@ -68,7 +68,7 @@ if (isDev) {
 } else {
   config = webpackMerge(baseConfig, {
     entry: {
-      app: path.join(__dirname, '../src/index.js'),
+      app: path.join(__dirname, '../client/index.js'),
       // 类库文件单独打包，方便做浏览器缓存
       vendor: ['vue']
     },
