@@ -46,7 +46,13 @@ if (isDev) {
           use: [
             // 用vue-style-loader可以实现样式热重载
             'vue-style-loader',
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                module: true,
+                localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]',
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {

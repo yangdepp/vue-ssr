@@ -1,9 +1,9 @@
 <template>
-  <header class="main-header">
+  <header :class="$style.mainHeader">
     <h1>TO DO LIST</h1>
   </header>
 </template>
-<style lang="less" scoped>
+<style lang="less" module>
 .main-header {
   text-align: center;
   h1 {
