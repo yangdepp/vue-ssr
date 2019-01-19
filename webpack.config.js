@@ -87,7 +87,7 @@ if (isDev) {
     // 为前端没有映射的地址，映射到首页
     // historyFallback: {},
     // 项目启动后自动打开浏览器
-    // open: true,
+    open: true,
     // hot 功能热更新
     hot: true,
   }
