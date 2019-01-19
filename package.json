@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.client.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/yangdepp/vue-learning#readme",
   "dependencies": {
+    "vue": "2.5.13"
+  },
+  "devDependencies": {
     "babel-loader": "7.1.2",
     "babel-preset-env": "1.6.1",
     "babel-helper-vue-jsx-merge-props": "2.0.3",
@@ -36,11 +39,11 @@
     "url-loader": "0.6.2",
     "postcss-loader": "2.0.9",
     "autoprefixer": "7.2.3",
-    "vue": "2.5.13",
     "vue-loader": "13.6.0",
     "vue-template-compiler": "2.5.13",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7",
-    "html-webpack-plugin": "2.30.1"
+    "html-webpack-plugin": "2.30.1",
+    "webpack-merge": "^4.1.1"
   }
 }
