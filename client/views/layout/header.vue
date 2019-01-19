@@ -4,7 +4,6 @@
   </header>
 </template>
 <style lang="less" module>
-
 .main-header {
   text-align: center;
   h1 {
