@@ -44,7 +44,8 @@ if (isDev) {
         {
           test: /\.less$/,
           use: [
-            'style-loader',
+            // 用vue-style-loader可以实现样式热重载
+            'vue-style-loader',
             'css-loader',
             {
               loader: 'postcss-loader',
@@ -82,7 +83,8 @@ if (isDev) {
         {
           test: /\.less$/,
           use: ExtractPlugin.extract({
-            fallback: 'style-loader',
+            // 用vue-style-loader可以实现样式热重载
+            fallback: 'vue-style-loader',
             use: [
               'css-loader',
               {

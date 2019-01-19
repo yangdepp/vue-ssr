@@ -1,5 +1,8 @@
 const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const isDev = process.env.NODE_ENV === 'development'
+const createVueLoaderOptions = require('./vue-loader.config')
+
 
 const config = {
   // 开发目标是web平台
@@ -16,6 +19,7 @@ const config = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        options: createVueLoaderOptions(isDev),
       },
       {
         test: /\.jsx$/,
