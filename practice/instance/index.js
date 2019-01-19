@@ -93,10 +93,10 @@ setInterval(() => {
 
 // 异步的渲染,是每次加5
 // app.$nextTick()
-setInterval(() => {
-  app.text += 1
-  app.text += 1
-  app.text += 1
-  app.text += 1
-  app.text += 1
-}, 1000)
+// setInterval(() => {
+//   app.text += 1
+//   app.text += 1
+//   app.text += 1
+//   app.text += 1
+//   app.text += 1
+// }, 1000)
