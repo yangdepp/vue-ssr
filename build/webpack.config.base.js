@@ -11,7 +11,8 @@ const config = {
   output: {
     // 输出的文件名
     filename: 'bundle.[hash:8].js',
-    path: path.join(__dirname, '../dist')
+    path: path.join(__dirname, '../dist'),
+    publicPath: 'http://127.0.0.1:8000/public/'
   },
   module: {
     rules: [

@@ -7,6 +7,9 @@ export default [
     redirect: '/app'
   },
   {
+    // path: '/app/:id',
+    // 定义这个，会把路由后面的参数当做props传给组件
+    // props: true,
     path: '/app',
     component: Todo,
     name: 'app',
@@ -24,9 +27,9 @@ export default [
   {
     path: '/login',
     component: Login
-  },
-  {
-    path: '/login/exact',
-    component: Login
   }
+  // {
+  //   path: '/login/exact',
+  //   component: Login
+  // }
 ]

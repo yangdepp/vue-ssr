@@ -3,7 +3,7 @@
     <div id="cover"></div>
     <Header></Header>
     <!-- <todo></todo> -->
-    <router-link :to="{name: 'app'}">app</router-link>
+    <router-link to="/app">app</router-link>
     <router-link to="/login">login</router-link>
     <transition name="fade">
       <router-view/>
@@ -16,8 +16,15 @@ import Header from './layout/header.vue'
 import Footer from './layout/footer.jsx'
 import todo from './views/todo/todo.vue'
 export default {
+  props: ['id'],
   data () {
     return {}
+  },
+  mounted () {
+    // 可以打印路由对象，拿到参数等
+    console.log(this.$route)
+    // 可以把路由参数传进来，直接打印
+    console.log(this.id)
   },
   components: {
     Header,

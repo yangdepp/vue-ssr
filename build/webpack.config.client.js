@@ -29,7 +29,7 @@ const devServer = {
   },
   // 为前端没有映射的地址，映射到首页
   historyApiFallback: {
-    index: '/index.html'
+    index: '/public/index.html'
   },
   // 项目启动后自动打开浏览器
   open: true,
