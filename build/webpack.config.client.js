@@ -14,7 +14,9 @@ const defaultPlugins = [
       NODE_ENV: isDev ? '"development"' : '"production"'
     }
   }),
-  new HTMLPlugin(),
+  new HTMLPlugin({
+    template: path.join(__dirname, 'template.html')
+  }),
 ]
 
 
@@ -26,7 +28,9 @@ const devServer = {
     errors: true,
   },
   // 为前端没有映射的地址，映射到首页
-  // historyFallback: {},
+  historyApiFallback: {
+    index: '/index.html'
+  },
   // 项目启动后自动打开浏览器
   open: true,
   // hot 功能热更新

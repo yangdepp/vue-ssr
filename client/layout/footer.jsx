@@ -1,4 +1,4 @@
-import '../../assets/style/footer.less'
+import '../assets/style/footer.less'
 
 export default {
   data () {
