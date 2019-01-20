@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './app.vue'
+import Vuex from 'vuex'
 
 import './assets/style/global.less'
 import createRouter from './config/router'
-import store from './store/store.js'
+import createStore from './store/store.js'
 
 Vue.use(VueRouter)
+Vue.use(Vuex)
 const router = createRouter()
+const store = createStore()
 
 new Vue({
   router,
