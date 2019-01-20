@@ -31,7 +31,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.id)
+    // console.log(this.id)
   },
   components: {
     Item,

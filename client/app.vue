@@ -2,6 +2,7 @@
   <div id="app">
     <div id="cover"></div>
     <Header></Header>
+    <p>{{count}}</p>
     <!-- <todo></todo> -->
     <router-link to="/app">app</router-link>
     <router-link to="/login">login</router-link>
@@ -22,9 +23,19 @@ export default {
   },
   mounted () {
     // 可以打印路由对象，拿到参数等
-    console.log(this.$route)
+    // console.log(this.$route)
     // 可以把路由参数传进来，直接打印
-    console.log(this.id)
+    // console.log(this.id)
+    console.log(this.$store)
+    let i = 1
+    setInterval(() => {
+      this.$store.commit('updateCount', i++)
+    }, 1000)
+  },
+  computed: {
+    count () {
+      return this.$store.state.count
+    }
   },
   components: {
     Header,
