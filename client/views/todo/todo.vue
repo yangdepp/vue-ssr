@@ -23,7 +23,7 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
-  props: ['id'],
+  // props: ['id'],
   data () {
     return {
       todos: [],
@@ -31,6 +31,7 @@ export default {
     }
   },
   mounted () {
+    // 可以把路由参数由props传进来，直接打印
     // console.log(this.id)
   },
   components: {

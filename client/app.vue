@@ -6,10 +6,12 @@
     <!-- <todo></todo> -->
     <router-link to="/app">app</router-link>
     <router-link to="/login">login</router-link>
+    <!-- 路由过渡动画 -->
     <transition name="fade">
       <router-view/>
     </transition>
     <Footer></Footer>
+    <!-- <router-view name="a"/> -->
   </div>
 </template>
 <script>
@@ -17,15 +19,12 @@ import Header from './layout/header.vue'
 import Footer from './layout/footer.jsx'
 import todo from './views/todo/todo.vue'
 export default {
-  props: ['id'],
   data () {
     return {}
   },
   mounted () {
     // 可以打印路由对象，拿到参数等
     // console.log(this.$route)
-    // 可以把路由参数传进来，直接打印
-    // console.log(this.id)
     console.log(this.$store)
     let i = 1
     setInterval(() => {

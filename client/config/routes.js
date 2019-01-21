@@ -12,12 +12,20 @@ export default [
     // props: true,
     path: '/app',
     component: Todo,
+    // components: {
+    //   default: Todo,
+    //   a: Login
+    // },
+    // 给路由命名，router-link中用
     name: 'app',
+    // TDK的描述
     meta: {
       title: 'this is app',
       description: 'app desc'
     }
-    // childern: [
+    // 相当于/app下的一个子路由
+    // 在todo组件中设置一个router-view即可
+    // children: [
     //   {
     //     path: 'test',
     //     component: Login
@@ -27,6 +35,10 @@ export default [
   {
     path: '/login',
     component: Login
+    // components: {
+    //   default: Login,
+    //   a: Todo
+    // }
   }
   // {
   //   path: '/login/exact',
