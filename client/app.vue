@@ -17,7 +17,9 @@
 <script>
 import {
   mapState,
-  mapGetters
+  mapGetters,
+  mapActions,
+  mapMutations
 } from 'vuex'
 import Header from './layout/header.vue'
 import Footer from './layout/footer.jsx'
@@ -29,11 +31,19 @@ export default {
   mounted () {
     // 可以打印路由对象，拿到参数等
     // console.log(this.$route)
-    console.log(this.$store)
+    // console.log(this.$store)
     // let i = 1
     // setInterval(() => {
     //   this.$store.commit('updateCount', i++)
     // }, 1000)
+    this.updateCountAsync({
+      num: 5,
+      time: 2000
+    })
+    let i = 1
+    setInterval(() => {
+      this.updateCount(i++)
+    }, 1000)
   },
   computed: {
     // 一般用法
@@ -54,6 +64,10 @@ export default {
     //   return this.$store.getters.fullName
     // }
     ...mapGetters(['fullName'])
+  },
+  methods: {
+    ...mapActions(['updateCountAsync']),
+    ...mapMutations(['updateCount'])
   },
   components: {
     Header,
