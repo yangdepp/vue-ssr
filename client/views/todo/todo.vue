@@ -23,6 +23,29 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  beforeRouteEnter (to, from, next) {
+    console.log('todo before enter')
+    // 通过vm可以获取数据
+    next(vm => {
+      console.log(vm)
+    })
+  },
+
+  // 同一个组件在不同路由下显示时调用
+  beforeRouteUpdate (to, from, next) {
+    console.log('todo before update')
+    next()
+  },
+
+  beforeRouteLeave (to, from, next) {
+    console.log('todo before leave')
+    // 可以控制页面离开的钩子
+    // if (global.confirm('are you sure')) {
+    //   next()
+    // }
+    next()
+  },
+
   // props: ['id'],
   data () {
     return {
