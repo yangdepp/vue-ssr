@@ -31,7 +31,7 @@ export default {
   mounted () {
     // 可以打印路由对象，拿到参数等
     // console.log(this.$route)
-    // console.log(this.$store)
+    // console.log(this.$store, this['a/textPlus'])
     // let i = 1
     // setInterval(() => {
     //   this.$store.commit('updateCount', i++)
@@ -44,6 +44,7 @@ export default {
     setInterval(() => {
       this.updateCount(i++)
     }, 1000)
+    // this['a/updateText']('text222')
   },
   computed: {
     // 一般用法
@@ -59,11 +60,18 @@ export default {
     // 还可以用函数接收
     ...mapState({
       counter: (state) => state.count
+      // textA: state => state.a.text
     }),
     // fullName () {
     //   return this.$store.getters.fullName
     // }
-    ...mapGetters(['fullName'])
+    ...mapGetters({
+      'fullName': 'fullName'
+      // 'textPlus': 'a/textPlus'
+    })
+    // textA () {
+    //   return this.$store.state.b.text
+    // }
   },
   methods: {
     ...mapActions(['updateCountAsync']),
