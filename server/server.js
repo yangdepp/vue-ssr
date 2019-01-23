@@ -28,6 +28,7 @@ app.use(async (ctx, next) => {
     await next()
   }
 })
+
 app.use(pageRouter.routes()).use(pageRouter.allowedMethods())
 
 const HOST = process.env.HOST || '0.0.0.0'
