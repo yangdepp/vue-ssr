@@ -5,7 +5,7 @@ const ExtractPlugin = require('extract-text-webpack-plugin')
 
 const baseConfig = require('./webpack.config.base')
 
-const vueServerPlugin = require('vue-server-renderer/server-plugin')
+const VueServerPlugin = require('vue-server-renderer/server-plugin')
 
 
 let config
@@ -16,15 +16,15 @@ config = webpackMerge(baseConfig, {
   target: 'node',
   entry: path.join(__dirname, '../client/server-entry.js'),
   // devtool调试时，打开的浏览器都是写的代码，而不是编译后的代码，方便调试
-  devtool: '#source-map',
+  devtool: 'source-map',
   output: {
     // 打包的模块类型
     libraryTarget: 'commonjs2',
     filename: 'server-entry.js',
     path: path.join(__dirname, '../server-build'),
-    // node环境可以直接require
-    externals: Object.keys(require('../package.json').dependencies),
   },
+  // node环境可以直接require
+  externals: Object.keys(require('../package.json').dependencies),
   module: {
     rules: [
       {
@@ -53,7 +53,7 @@ config = webpackMerge(baseConfig, {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.VUE_ENV': '"server"'
     }),
-    new vueServerPlugin()
+    new VueServerPlugin()
   ]
 })
 

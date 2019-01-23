@@ -2,10 +2,10 @@
   <div id="app">
     <div id="cover"></div>
     <Header></Header>
-    <p>{{counter}}{{fullName}}</p>
+    <!-- <p>{{counter}}{{fullName}}</p> -->
     <!-- <todo></todo> -->
-    <router-link to="/app">app</router-link>
-    <router-link to="/login">login</router-link>
+    <!-- <router-link to="/app">app</router-link>
+    <router-link to="/login">login</router-link> -->
     <!-- 路由过渡动画 -->
     <transition name="fade">
       <router-view/>
@@ -15,12 +15,12 @@
   </div>
 </template>
 <script>
-import {
-  mapState,
-  mapGetters,
-  mapActions,
-  mapMutations
-} from 'vuex'
+// import {
+//   // mapState,
+//   // mapGetters,
+//   // mapActions,
+//   // mapMutations
+// } from 'vuex'
 import Header from './layout/header.vue'
 import Footer from './layout/footer.jsx'
 // import todo from './views/todo/todo.vue'
@@ -36,14 +36,14 @@ export default {
     // setInterval(() => {
     //   this.$store.commit('updateCount', i++)
     // }, 1000)
-    this.updateCountAsync({
-      num: 5,
-      time: 2000
-    })
-    let i = 1
-    setInterval(() => {
-      this.updateCount(i++)
-    }, 1000)
+    // this.updateCountAsync({
+    //   num: 5,
+    //   time: 2000
+    // })
+    // let i = 1
+    // setInterval(() => {
+    //   this.updateCount(i++)
+    // }, 1000)
     // this['a/updateText']('text222')
   },
   computed: {
@@ -58,24 +58,24 @@ export default {
     //   counter: 'count'
     // }),
     // 还可以用函数接收
-    ...mapState({
-      counter: (state) => state.count
-      // textA: state => state.a.text
-    }),
-    // fullName () {
-    //   return this.$store.getters.fullName
-    // }
-    ...mapGetters({
-      'fullName': 'fullName'
-      // 'textPlus': 'a/textPlus'
-    })
+    // ...mapState({
+    //   counter: (state) => state.count
+    //   // textA: state => state.a.text
+    // }),
+    // // fullName () {
+    // //   return this.$store.getters.fullName
+    // // }
+    // ...mapGetters({
+    //   'fullName': 'fullName'
+    //   // 'textPlus': 'a/textPlus'
+    // })
     // textA () {
     //   return this.$store.state.b.text
     // }
   },
   methods: {
-    ...mapActions(['updateCountAsync']),
-    ...mapMutations(['updateCount'])
+    // ...mapActions(['updateCountAsync']),
+    // ...mapMutations(['updateCount'])
   },
   components: {
     Header,

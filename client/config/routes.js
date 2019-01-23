@@ -9,14 +9,14 @@ export default [
   {
     // path: '/app/:id',
     // 定义这个，会把路由后面的参数当做props传给组件
-    // props: true,
     path: '/app',
+    props: true,
     // component: Todo,
     // 异步路由
     component: () => import('../views/todo/todo.vue'),
     // components: {
     //   default: Todo,
-    //   a: Login                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    //   a: login
     // },
     // 给路由命名，router-link中用
     name: 'app',

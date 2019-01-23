@@ -7,6 +7,7 @@ const webpackMerge = require('webpack-merge')
 const ExtractPlugin = require('extract-text-webpack-plugin')
 
 const baseConfig = require('./webpack.config.base')
+const VueClientPlugin = require('vue-server-renderer/client-plugin')
 const defaultPlugins = [
   // 根据环境变量，用各种版本的vue，这样可以在开发环境提示报错信息
   new webpack.DefinePlugin({
@@ -17,6 +18,8 @@ const defaultPlugins = [
   new HTMLPlugin({
     template: path.join(__dirname, 'template.html')
   }),
+  // 打包客户端的js文件
+  new VueClientPlugin()
 ]
 
 

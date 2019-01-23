@@ -16,7 +16,7 @@ export default () => {
       if (savedPosition) {
         return savedPosition
       } else {
-        return {x: 0, y: 0}
+        return { x: 0, y: 0 }
       }
     }
     // url后面跟着的参数，字符串转成JSON Object
