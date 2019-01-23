@@ -1,7 +1,7 @@
-const koa = require('koa')
+const Koa = require('koa')
 const pageRouter = require('./routers/dev-ssr')
 const send = require('koa-send')
-const app = new koa()
+const app = new Koa()
 const path = require('path')
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development'
 app.use(async (ctx, next) => {
   try {
     console.log(`request with path ${ctx.path}`)
-    next()
+    await next()
   } catch (err) {
     console.log(err)
     ctx.status = 500
@@ -22,8 +22,8 @@ app.use(async (ctx, next) => {
   }
 })
 app.use(async (ctx, next) => {
-  if(ctx.path === './favicon.ico') {
-    await send(ctx, './favicon.ico', { root: path.join(__dirname, '../') })
+  if(ctx.path === '/favicon.ico') {
+    await send(ctx, '/favicon.ico', { root: path.join(__dirname, '../') })
   }else {
     await next()
   }
