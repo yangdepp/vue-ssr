@@ -25,6 +25,9 @@ import Header from './layout/header.vue'
 import Footer from './layout/footer.jsx'
 // import todo from './views/todo/todo.vue'
 export default {
+  metaInfo: {
+    title: 'MY TODO LIST'
+  },
   data () {
     return {}
   },

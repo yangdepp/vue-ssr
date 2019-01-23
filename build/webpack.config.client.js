@@ -35,7 +35,7 @@ const devServer = {
     index: '/public/index.html'
   },
   // 项目启动后自动打开浏览器
-  open: true,
+  // open: true,
   // hot 功能热更新
   hot: true,
 }
@@ -76,13 +76,14 @@ if (isDev) {
 } else {
   config = webpackMerge(baseConfig, {
     entry: {
-      app: path.join(__dirname, '../client/index.js'),
+      app: path.join(__dirname, '../client/client-entry.js'),
       // 类库文件单独打包，方便做浏览器缓存
       vendor: ['vue']
     },
     output: {
       // 生产环境用chunkHash，可以保证业务代码改变，打包后不改变类库代码的hash
-      filename: '[name].[chunkHash:8].js'
+      filename: '[name].[chunkHash:8].js',
+      publicPath: '/public/'
     },
     module: {
       // 生产环境打包时，css单独打包，并加上hash，做缓存

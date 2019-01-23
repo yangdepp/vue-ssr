@@ -23,6 +23,9 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  metaInfo: {
+    title: 'TODO'
+  },
   // beforeRouteEnter (to, from, next) {
   //   console.log('todo before enter')
   //   // 通过vm可以获取数据

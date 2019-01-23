@@ -7,11 +7,11 @@ const config = {
   // 开发目标是web平台
   target: 'web',
   // 入口文件，path.join(__dirname)当前目录+后面行成绝对路径
-  entry: path.join(__dirname, '../client/index.js'),
+  entry: path.join(__dirname, '../client/client-entry.js'),
   output: {
     // 输出的文件名
     filename: 'bundle.[hash:8].js',
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../public'),
     publicPath: 'http://127.0.0.1:8000/public/'
   },
   module: {
