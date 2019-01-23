@@ -24,9 +24,14 @@
   },
   "homepage": "https://github.com/yangdepp/vue-learning#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "vue": "2.5.13",
     "vue-router": "^3.0.1",
-    "vuex": "^3.1.0"
+    "vue-server-renderer": "^2.5.13",
+    "vuex": "^3.1.0",
+    "koa": "^2.4.1",
+    "koa-router": "^7.4.0",
+    "axios": "^0.17.1"
   },
   "devDependencies": {
     "autoprefixer": "7.2.3",
@@ -53,6 +58,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.6",
     "html-webpack-plugin": "2.30.1",
+    "memory-fs": "^0.4.1",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "postcss-loader": "2.0.9",

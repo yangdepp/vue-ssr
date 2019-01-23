@@ -16,7 +16,7 @@ export default [
     component: () => import('../views/todo/todo.vue'),
     // components: {
     //   default: Todo,
-    //   a: Login
+    //   a: Login                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
     // },
     // 给路由命名，router-link中用
     name: 'app',
