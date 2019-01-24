@@ -47,7 +47,7 @@ const config = {
               // 以1024K为限制，小于的就转成Base64代码
               limit: 1024,
               // name是图片原来的名字，ext是扩展名
-              name: 'resources/[path][name].[hash8].[ext]'
+              name: 'resources/[path][name].[hash:8].[ext]'
             }
           }
         ]
